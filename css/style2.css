@@ -1,0 +1,521 @@
+.conteneur {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+/*------- SLIDER CSS ------*/
+
+#sliderAccueil {
+  margin-top: 10px;
+}
+#slideshow-wrap {
+  display: block;
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+#slideshow-inner {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+#slideshow-inner > ul {
+  list-style: none;
+  height: 100%;
+  width: 500%;
+  overflow: hidden;
+  position: relative;
+
+  top: 0px;
+  -webkit-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+/* --------------- MES SLIDES ---------------- */
+
+/*slides size (background part) */
+.slides {
+  height: 100%;
+  width: 65%;
+}
+
+#slide1 {
+  background: url( "../img/IMG-20200529-WA0062.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+#slide2 {
+  background: url( "../img/meat and poutry.png")
+    no-repeat center center;
+  background-size: cover;
+}
+#slide3 {
+  background: url( "../img/Selection-of-fresh-fruit-and-vegetables.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+
+#slide4 {
+  background: url( "../img/Home services.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+/* --------------- /MES SLIDES ---------------- */
+
+#slideshow-inner > ul > li {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+/* On cache les boutons radio d'origine */
+#slideshow-wrap input[type="radio"] {
+  position: absolute;
+  left: 30%;
+  bottom: 15px;
+  visibility: hidden;
+}
+
+/* Pour en créer de nouveaux avec un autre style */
+#slideshow-wrap label:not(.arrows) {
+  z-index: 2;
+  position: absolute;
+  right: 80px;
+  height: 25px;
+  width: 25px;
+/*  background-color: #0c2437;*/
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  bottom: 25px;
+}
+
+/* Action du click */
+#slideshow-wrap label:not(.arrows):active {
+  background-color: grey;
+  bottom: 26px;
+}
+
+/* Couleur de fond des boutons radio checked */
+#slideshow-wrap input[type="radio"]#button-1:checked ~ label[for="button-1"] {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#slideshow-wrap input[type="radio"]#button-2:checked ~ label[for="button-2"] {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#slideshow-wrap input[type="radio"]#button-3:checked ~ label[for="button-3"] {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#slideshow-wrap input[type="radio"]#button-4:checked ~ label[for="button-4"] {
+  background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+/* Décalage des boutons radio */
+#slideshow-wrap label[for="button-1"]:not(.arrows) {
+  margin-right: 56px;
+}
+
+#slideshow-wrap label[for="button-2"]:not(.arrows) {
+  margin-right: 18px;
+}
+
+#slideshow-wrap label[for="button-3"]:not(.arrows) {
+  margin-right: -18px;
+}
+
+#slideshow-wrap label[for="button-4"]:not(.arrows) {
+  margin-right: -56px;
+}
+
+/* Décalage des images de fond au click (100% = une image) */
+#slideshow-wrap input[type="radio"]#button-1:checked ~ #slideshow-inner > ul {
+  left: 0;
+}
+
+#slideshow-wrap input[type="radio"]#button-2:checked ~ #slideshow-inner > ul {
+  left: -100%;
+}
+
+#slideshow-wrap input[type="radio"]#button-3:checked ~ #slideshow-inner > ul {
+  left: -200%;
+}
+
+#slideshow-wrap input[type="radio"]#button-4:checked ~ #slideshow-inner > ul {
+  left: -300%;
+}
+
+label.arrows {
+  /* Flèche des boutons Gauche / Droite */
+  font-family: "WebSymbolsRegular";
+  font-size: 25px;
+  color: rgb(255, 255, 240);
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  display: none;
+  opacity: 0.7;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+	
+}
+label.arrows:hover {
+  opacity: 1;
+}
+
+label.arrows:active {
+  margin-top: -23px;
+}
+
+input[type="radio"]#button-1:checked ~ .arrows#arrow-2,
+input[type="radio"]#button-2:checked ~ .arrows#arrow-3,
+input[type="radio"]#button-3:checked ~ .arrows#arrow-4,
+input[type="radio"]#button-4:checked ~ .arrows#arrow-5 {
+  /* Boutons Droite déplacement */
+  padding: 17px 24px;
+  right: 10px;
+  z-index: 2;
+  display: block;
+  border-radius: 45px;
+/*  background: rgba(0, 0, 0, 0.8);*/
+}
+input[type="radio"]#button-2:checked ~ .arrows#arrow-1,
+input[type="radio"]#button-3:checked ~ .arrows#arrow-2,
+input[type="radio"]#button-4:checked ~ .arrows#arrow-3,
+input[type="radio"]#button-5:checked ~ .arrows#arrow-4 {
+  /* Boutons Gauche déplacement */
+  padding: 17px 24px;
+  border-radius: 45px;
+/*  background: rgba(0, 0, 0, 0.8);*/
+  left: 10px;
+  z-index: 2;
+  display: block;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/*----- ONGLET DESCRIPTION SLIDER CSS ------*/
+
+.description {
+  position: absolute;
+  display: flex;
+  
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+}
+.description .description-text {
+  background-color: darkgoldenrod;
+  opacity: 1;
+	
+  height: 100%;
+  padding: 30px 30px 60px 30px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  color: white;
+}
+.description-text h2 {
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: 15px;
+	text-align: center;
+	z-index: 2
+}
+
+.description-text p {
+  line-height: 20px;
+  font-weight: 100;
+	z-index: 999;
+	text-align: center
+}
+
+.description-text p span {
+  background: url(https://www.iconsdb.com/icons/preview/white/note-2-xxl.png)
+    no-repeat center center;
+  background-size: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/*
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+*/
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+/*  border: 3px solid  #90DBD2;*/
+  border: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 38px;
+  border: none;
+  background: yellowgreen;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.searchButton :focus{
+	outline: none
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap1{
+  width: 30%;
+	min-width: 240px;
+	margin-right: 40px;
+  position: fixed;
+ margin-top: -30px;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.testimony {
+  background: url( "../images/waves.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimony::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #0a1725;
+    opacity: .6;
+    z-index: 0;
+}
+
+.testimony-overlay {
+    flex: 1;
+    margin: auto;
+    color: white;
+    text-align: center;
+    z-index: 6;
+}
+
+.testimony-overlay p {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.main-gallery {
+ 
+ 
+ color: white;
+	
+
+}
+
+.gallery-cell {
+  width: 100%;
+}
+
+.testimonial {
+  text-align: center;
+  max-width: 850px;
+  margin: 100px auto 130px auto;
+  padding: 0 20px;
+}
+
+.testimonial-avatar {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.testimonial-quote {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 10px 0;
+}
+
+.testimonial-author {
+  display: block;
+  font-weight: 800;
+  color: #7AA641;
+}
+
+.flickity-page-dots {
+  bottom: 25px;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: #7AA641;
+}
+
+
+#toTop {
+
+    position: fixed;
+    bottom: 20px;
+    right: 12px;
+    display: none;
+	z-index: 99999999;
+}
+
+#toTop img{
+	width: 40px;
+	height: 40px;
+}
+
+ .dropdown a{
+			  height: 40px
+		  }
+		  .dropdown-menu{
+			  margin-top: -3px
+		  }
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 1051px) {
+  .description {
+   top: 0;
+  right: 0; 
+  }
+	.description-text p{
+		font-size: 22px
+	}
+}
+
+@media screen and (max-width: 1050px) {
+  .description {
+    width: 100%;
+	 height: 200px; 
+	  bottom: 0
+  }
+
+  .description .description-text {
+    opacity: 0.85;
+	  width: 100%;
+  }
+	.description-text .p1 {
+		display: none
+	}
+	.description-text h2{
+		font-size: 22px;
+		font-weight: 600
+	}
+	
+	
+  .slides {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .description-text h2 {
+    font-size: 18px
+  }
+	.wrap1{
+left: 45%;
+	}
+	.logotxt{
+		display: none
+	}
+	.back{
+		display: none
+	}
+	
+}
+@media screen and (max-width: 970px) {
+ 
+	.wrap1{
+left: 53%;
+	}
+	
+}
+/*
+.navbar-brand img{
+	display: none
+}
+.wrap1{
+ 
+ margin-top: -20px;
+}
+*/
