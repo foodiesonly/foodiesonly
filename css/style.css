@@ -3443,7 +3443,7 @@ input[type="button"].btn-block {
   display: block; }
 
 .navbar {
-  position: sticky;
+  position: fixed;
 	top: 0px;
 	width: 100%;
   display: -webkit-box;
