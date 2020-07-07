@@ -9274,6 +9274,9 @@ textarea.form-control {
 	.ftco-category{
 		margin-top: -220px;
 	}
+	.ftco-footer {
+		margin-left: -80px
+	}
 /*
 	.ftco-section {
   padding: 6em 0 0 6em;
