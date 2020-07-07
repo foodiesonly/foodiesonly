@@ -3,6 +3,7 @@
   margin: 0 auto;
 	margin-top: 100px
 }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -327,7 +328,7 @@ body{
 /*Resize the wrap to see the search bar change!*/
 .wrap1{
   width: 30%;
-	min-width: 240px;
+	min-width: 180px;
 	margin-right: 40px;
   position: fixed;
  margin-top: -30px;
@@ -544,6 +545,13 @@ testimonial {
 
 	
 }
+@media screen and (max-width: 500px) {
+	.wrap1{
+		width: 220px;
+/*	min-width: 200px;*/
+	}
+}
+
 /*
 .navbar-brand img{
 	display: none
