@@ -551,6 +551,9 @@ testimonial {
 		margin-left:-6px;
 /*	min-width: 200px;*/
 	}
+	.mobile-hide{
+		display: none;
+	}
 }
 
 /*
