@@ -227,20 +227,20 @@
 
 
 
-	var goHere = function() {
+// 	var goHere = function() {
 
-		$('.mouse-icon').on('click', function(event){
+// 		$('.mouse-icon').on('click', function(event){
 			
-			event.preventDefault();
+// 			event.preventDefault();
 
-			$('html,body').animate({
-				scrollTop: $('.goto-here').offset().top
-			}, 500, 'easeInOutExpo');
+// 			$('html,body').animate({
+// 				scrollTop: $('.goto-here').offset().top
+// 			}, 500, 'easeInOutExpo');
 			
-			return false;
-		});
-	};
-	goHere();
+// 			return false;
+// 		});
+// 	};
+// 	goHere();
 
 
 	function makeTimer() {
